@@ -1,6 +1,6 @@
 # Approaching an unknown communication system by latent space exploration and causal inference
 
-This repository is the supplement submission of the above paper.
+This repository is part of the supplement submission of the above paper.
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials.
 
