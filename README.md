@@ -18,20 +18,32 @@ pip install -r requirements.txt
 
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 
-## Training
 
-To train the model(s) in the paper, run this command:
 
+## The `fiwGAN` model
+
+The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan).  
+
+
+
+Unfortunately, the data is not free to share; the training parameters, however, were the following:
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\
+--num_epochs 8000 --slice_len 65536
 ```
+
+Add `--cont last` to the end of the training statement to continue from the last found state  
+Add `--cont epoch_number` to continue from the state corresponding to `epoch_number`
+
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
 
-## Pre-trained Models
+### Trained Model
 
-You can download pretrained models here:
+<!-- TODO: hyperparam / script -->
+
+The trained model used to generate results can be obtained here and loaded with 
 
 - [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
 
