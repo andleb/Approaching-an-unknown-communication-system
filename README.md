@@ -4,7 +4,7 @@ This repository is the supplement submission of the above paper.
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials.
 
-<img src="figs/SchematicCDEV.png" width=200% height=200%>>
+<img src="figs/SchematicCDEV.png" width=50% height=50%>>
 
 
 
