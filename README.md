@@ -1,6 +1,6 @@
 # Approaching an unknown communication system by latent space exploration and causal inference
 
-This repository is part of the supplement submission of the above paper.
+[This repository](https://github.com/Neurips2023Submission/Neurips2023Submission/) is part of the supplement submission of the above paper.
 
 >📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials.
 
