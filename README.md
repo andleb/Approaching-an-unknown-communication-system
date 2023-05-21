@@ -29,7 +29,7 @@ The command-line parameters were the following:
 
 ```train
 python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\
---num_epochs 8000 --slice_len 65536
+--num_epochs 15000 --slice_len 65536
 ```
 
 The remaining hyperparameters were the model defaults set [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL98C5-L98C5) and [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL135C5-L135C5).
@@ -83,9 +83,11 @@ python eval.py --model-file mymodel.pth --benchmark imagenet
 
 #### Compute resources used for data generation and analysis
 
-The data generation was done in parallel via four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
+The data generation was done in parallel on four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
 
 The analysis of those outcomes and the generation of the results was then performed locally.
+
+<!-- TODO: add CPU cluster if lgbm results included -->
 
 
 
