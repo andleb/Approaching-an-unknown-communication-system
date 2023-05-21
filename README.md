@@ -25,28 +25,35 @@ pip install -r requirements.txt
 
 The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan).  
 
+The command-line parameters were the following:
 
-
-Unfortunately, the data is not free to share; the training parameters, however, were the following:
 ```train
 python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\
 --num_epochs 8000 --slice_len 65536
 ```
 
-Add `--cont last` to the end of the training statement to continue from the last found state  
-Add `--cont epoch_number` to continue from the state corresponding to `epoch_number`
+The remaining hyperparameters were the model defaults set [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL98C5-L98C5) and [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL135C5-L135C5).
 
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+### The training data
+
+
+Unfortunately, the raw audio training data is not free to share. It based on of hours of continuous recordings by whale-born tags, which were then annotated with the positions of actual codas. These annotations were then used to extract the training data.
+
+The training data thus consisted of 2209 *coda* samples of less than 2s in length, encoded in 32 kHZ mono `wav` format.
+In terms of data preprocessing, a constant DC microphone bias was removed from the extracted recordings, which were then augmented by random zero-padding in the front to address the fact that all the extracted codas would otherwise have a click at the very beginning.
+
 
 
 ### Trained Model
 
-<!-- TODO: hyperparam / script -->
+<!-- TODO: link -->
+Instead of the data, we thus provide the trained model used to generate results, which can be obtained here 
 
-The trained model used to generate results can be obtained here and loaded with 
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
+and loaded with 
+
+<!-- TODO: snippet from code -->
 
 
 #### Compute resources used for model training
@@ -57,6 +64,9 @@ The trained model used to generate results can be obtained here and loaded with
 
 
 The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623.
+
+
+
 
 
 ## Analysis
@@ -75,7 +85,7 @@ python eval.py --model-file mymodel.pth --benchmark imagenet
 
 The data generation was done in parallel via four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
 
-The analysis of those outcomes and the generation of the results was then done locally.
+The analysis of those outcomes and the generation of the results was then performed locally.
 
 
 
