@@ -74,13 +74,13 @@ The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 
 
 ## Analysis
 
-To evaluate my model on ImageNet, run:
+<!-- To evaluate my model on ImageNet, run:
 
 ```eval
 python eval.py --model-file mymodel.pth --benchmark imagenet
 ```
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+>📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below). -->
 
 
 
@@ -97,8 +97,12 @@ The analysis of those outcomes and the generation of the results was then perfor
 
 
 ## Results
+<!-- TODO: present results here at all? Just the simplest - nClicks? -->
 
-Our model achieves the following performance on :
+<!-- Adding a table of results into README.md lets your users quickly understand what to expect from the repository (see the README.md template for an example). Instructions on how to reproduce those results (with links to any relevant scripts, pretrained models etc) can provide another entry point for the user and directly facilitate reproducibility. In some cases, the main result of a paper is a Figure, but that might be more difficult for users to understand without reading the paper. -->
+
+
+<!-- Our model achieves the following performance on :
 
 ### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
 
@@ -106,7 +110,7 @@ Our model achieves the following performance on :
 | ------------------ |---------------- | -------------- |
 | My awesome model   |     85%         |      95%       |
 
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+>📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it.  -->
 
 
 ## License
