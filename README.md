@@ -11,11 +11,14 @@
 
 ## Requirements
 
+<!-- TODO: add the analysis ones, too -->
 To install requirements for 
 
 ```setup
 pip install -r requirements.txt
 ```
+
+
 
 
 ## The `fiwGAN` model
@@ -36,7 +39,7 @@ Add `--cont epoch_number` to continue from the state corresponding to `epoch_num
 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
- 
+
 ### Trained Model
 
 <!-- TODO: hyperparam / script -->
@@ -45,7 +48,16 @@ The trained model used to generate results can be obtained here and loaded with
 
 - [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
 
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+
+#### Compute resources used for model training
+
+<!-- Compute: Did you include the amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)? Ideally, you would provide the compute required for each of the individual experimental runs as well as the total compute. Note that your full research project might have required more compute than the experiments reported in the paper (e.g., preliminary or failed experiments that didn't make it into the paper). Enter yes, no, n/a, or an explanation if appropriate. Answers are visible to reviewers.
+
+    Authors are encouraged to provide as much information as practical about the type and amount of compute used for experiments. The total compute used for all experiments may be harder to characterize, but if you can do that, that would be even better. -->
+
+
+The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623.
+
 
 ## Analysis
 
@@ -56,6 +68,17 @@ python eval.py --model-file mymodel.pth --benchmark imagenet
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+
+
+
+#### Compute resources used for data generation and analysis
+
+The data generation was done in parallel via four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
+
+The analysis of those outcomes and the generation of the results was then done locally.
+
+
+
 
 
 ## Results
