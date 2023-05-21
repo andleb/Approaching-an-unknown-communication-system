@@ -14,11 +14,9 @@
 <!-- TODO: add the analysis ones, too -->
 To install requirements for 
 
-```setup
+```shell
 pip install -r requirements.txt
 ```
-
-
 
 
 ## The `fiwGAN` model
@@ -27,7 +25,7 @@ The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](
 
 The command-line parameters were the following:
 
-```train
+```shell
 python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\
 --num_epochs 15000 --slice_len 65536
 ```
@@ -44,17 +42,22 @@ The training data thus consisted of 2209 *coda* samples of less than 2s in lengt
 In terms of data preprocessing, a constant DC microphone bias was removed from the extracted recordings, which were then augmented by random zero-padding in the front to address the fact that all the extracted codas would otherwise have a click at the very beginning.
 
 
-
 ### Trained Model
 
-<!-- TODO: link -->
-Instead of the data, we thus provide the trained model used to generate results, which can be obtained here 
+Instead of the data, we thus provide the generator component of trained model, used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
 
+It can loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path:
 
-and loaded with 
+```python
+import torch
+from infowavegan import WaveGANGenerator
 
-<!-- TODO: snippet from code -->
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+G = WaveGANGenerator(slice_len=2**16)
+G.load_state_dict(torch.load("model.pt", map_location=device))
+G.to(device)
+```
 
 #### Compute resources used for model training
 
