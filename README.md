@@ -12,7 +12,7 @@
 ## Requirements
 
 <!-- TODO: add the analysis ones, too -->
-To install requirements for 
+To install requirements for the model and the analysis, run:
 
 ```shell
 pip install -r requirements.txt
