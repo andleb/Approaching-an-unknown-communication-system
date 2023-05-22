@@ -38,13 +38,13 @@ def weighted_std(var, wts):
 def weighted_skew(var, wts):
     """Calculates the weighted skewness"""
     return (np.average((var - weighted_mean(var, wts)) ** 3, weights=wts) /
-            weighted_variance(var, wts) ** (1.5))
+            weighted_variance(var, wts) ** 1.5)
 
 
 def weighted_kurtosis(var, wts):
     """Calculates the weighted skewness"""
     return (np.average((var - weighted_mean(var, wts)) ** 4, weights=wts) /
-            weighted_variance(var, wts) ** (2))
+            weighted_variance(var, wts) ** 2)
 
 
 def getNoiseThresh(Sxx):
@@ -74,7 +74,7 @@ def filterAndCalc(data):
     # replace in-place
     data = sp.sosfilt(fltr, data)
 
-    peaks, nclicks = clickDetector(data, filter=False)
+    peaks, nclicks = clickDetector(data, fltr=False)
 
     ff, codaSpectrum = sp.periodogram(data, fs=fs, window="hamming")
 
@@ -119,10 +119,6 @@ def filterAndCalc(data):
 
     # NOTE: don't normalize yet!
     return nclicks, codaStats, clickStats, (ff, codaSpectrum), (ffC, clickSpectra)
-
-
-def averagePerLevel(res):
-    pass
 
 
 if __name__ == "__main__":
