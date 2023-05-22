@@ -110,10 +110,17 @@ script with the same command-line parameter.
 
 ### Analysis notebooks
 
+For convenience, the raw outputs of the data generation above is provided in [data/](https://github.com/Neurips2023Submission/Neurips2023Submission/tree/main/data).
+
+- [nClicks.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/nClicks.ipynb) replicates the
+  results presented in _Section 3_ of the paper.
+
+-
 
 
 
 
+<!-- TODO: add lgbm notebooks if possible, otherwise just provide the scripts -->
 
 
 
