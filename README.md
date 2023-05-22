@@ -46,7 +46,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
 
-It can loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path:
+It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path:
 
 ```python
 import torch
@@ -75,21 +75,51 @@ The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 
 ## Analysis
 
 <!-- To evaluate my model on ImageNet, run:
-
 ```eval
 python eval.py --model-file mymodel.pth --benchmark imagenet
 ```
-
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below). -->
 
 
-
 ### The click detector
-<!-- TODO: link, details from Arxiv -->
+<!-- TODO: details from Arxiv? -->
+
+
+The [click detector module](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/clickDetector.py)
+outputs the *inter-click intervals* (ICIs) and the overall number of clicks in the provided generated raw audio sample.
+It uses some signal filtering and minimal thresholds for both the amplitude and the temporal separation,
+both based on our prior knowledge of whale communication.
+
+
+### Data generation
+
+The data generation for the experiments based on the number of clicks and the inter-click intervals (ICIs) is performed 
+by running the [dataGenClick](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenClick.py) 
+script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt) as a 
+command-line parameter.
+
+The data generation for the experiments based on the audio properties is performed 
+by running the [dataGenAudio](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenAudio.py) 
+script with the same command-line parameter.
+
+
+<!-- TODO: explain preprocessing in the supplement doc instead of here --> 
+
+
+
+### Analysis notebooks
+
+
+
+
+
+
 
 ### Compute resources used for data generation and analysis
 
-The data generation was done in parallel on four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
+The data generation and calculation of the quantities of interest was done in parallel on four Nvidia T4 GPUs
+on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing,
+and audio properties.
 
 The analysis of those outcomes and the generation of the results was then performed locally.
 
@@ -102,7 +132,7 @@ The analysis of those outcomes and the generation of the results was then perfor
 ## Results
 <!-- TODO: present results here at all? Just the simplest - nClicks? -->
 
-<!-- Adding a table of results into README.md lets your users quickly understand what to expect from the repository (see the README.md template for an example). Instructions on how to reproduce those results (with links to any relevant scripts, pretrained models etc) can provide another entry point for the user and directly facilitate reproducibility. In some cases, the main result of a paper is a Figure, but that might be more difficult for users to understand without reading the paper. -->
+<!-- Adding a table of results into README.md lets your users quickly understand what to expect from the repository (see the README.md template for an example). Instructions on how to reproduce those results (with links to any relevant scripts, pretrained models etc.) can provide another entry point for the user and directly facilitate reproducibility. In some cases, the main result of a paper is a Figure, but that might be more difficult for users to understand without reading the paper. -->
 
 
 <!-- Our model achieves the following performance on :
