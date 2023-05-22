@@ -1,4 +1,3 @@
-ipython==7.34.0
 matplotlib==3.5.3
 numpy==1.23.2
 numpy_indexed==0.3.5
