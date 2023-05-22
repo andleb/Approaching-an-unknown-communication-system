@@ -116,6 +116,8 @@ script with the same command-line parameter.
 
 
 
+
+
 ### Compute resources used for data generation and analysis
 
 The data generation and calculation of the quantities of interest was done in parallel on four Nvidia T4 GPUs
