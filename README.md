@@ -46,7 +46,8 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
 
-It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path:
+It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path 
+(all following code also assumes the module is on the path):
 
 ```python
 import torch
