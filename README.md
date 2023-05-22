@@ -44,7 +44,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 ### Trained Model
 
-Instead of the data, we thus provide the generator component of trained model, used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
+Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
 
 It can loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path:
 
@@ -59,7 +59,7 @@ G.load_state_dict(torch.load("model.pt", map_location=device))
 G.to(device)
 ```
 
-#### Compute resources used for model training
+### Compute resources used for model training
 
 <!-- Compute: Did you include the amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)? Ideally, you would provide the compute required for each of the individual experimental runs as well as the total compute. Note that your full research project might have required more compute than the experiments reported in the paper (e.g., preliminary or failed experiments that didn't make it into the paper). Enter yes, no, n/a, or an explanation if appropriate. Answers are visible to reviewers.
 
@@ -84,7 +84,10 @@ python eval.py --model-file mymodel.pth --benchmark imagenet
 
 
 
-#### Compute resources used for data generation and analysis
+### The click detector
+<!-- TODO: link, details from Arxiv -->
+
+### Compute resources used for data generation and analysis
 
 The data generation was done in parallel on four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance, taking about a day for each of the two outcome types presented: click number and spacing, and audio properties.
 
