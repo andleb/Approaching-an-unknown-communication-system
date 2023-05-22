@@ -110,13 +110,18 @@ script with the same command-line parameter.
 
 ### Analysis notebooks
 
-For convenience, the raw outputs of the data generation above is provided in [data/](https://github.com/Neurips2023Submission/Neurips2023Submission/tree/main/data).
+For convenience, the raw outputs of the data generation above are provided in [data/](https://github.com/Neurips2023Submission/Neurips2023Submission/tree/main/data).
 
 - [nClicks.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/nClicks.ipynb) replicates the
-  results presented in _Section 3_ of the paper.
+  results for the _number of clicks_, presented in _Section 3_ of the paper.
 
--
+- [ICI.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/ICI.ipynb) replicates the
+  results for the *click spacing and regularity*, presented in _Section 4_ of the paper.
 
+- [acoustic.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/acoustic.ipynb)
+  replicates the results for the *acoustic properties*, presented in _Section 5_ of the paper. 
+  Note that since these results were obtained from an independently sampled $X$, a replication of the
+  result for the number of clicks is included in the notebook as a means of checking the validity of the preceding results.
 
 
 
