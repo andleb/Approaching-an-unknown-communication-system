@@ -43,7 +43,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 ### Trained Model
 
-Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
+Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/submission/model.pt).
 
 It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
 (all following code also assumes the module is on the path):
@@ -87,7 +87,7 @@ both based on our prior knowledge of whale communication.
 
 The data generation for the experiments based on the number of clicks and the inter-click intervals (ICIs) is performed
 by running the [dataGenClick](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenClick.py)
-script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt) as a
+script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/submission/model.pt) as a
 command-line parameter.
 
 The data generation for the experiments based on the audio properties is performed
