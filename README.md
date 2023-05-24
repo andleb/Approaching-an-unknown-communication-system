@@ -11,7 +11,6 @@
 
 ## Requirements
 
-<!-- TODO: add the analysis ones, too -->
 To install requirements for the model and the analysis, run:
 
 ```shell
@@ -21,7 +20,7 @@ pip install -r requirements.txt
 
 ## The `fiwGAN` model
 
-The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan).  
+The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan).
 
 The command-line parameters were the following:
 
@@ -46,7 +45,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt).
 
-It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path 
+It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
 (all following code also assumes the module is on the path):
 
 ```python
@@ -75,16 +74,8 @@ The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 
 
 ## Analysis
 
-<!-- To evaluate my model on ImageNet, run:
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
-```
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below). -->
-
 
 ### The click detector
-<!-- TODO: details from Arxiv? -->
-
 
 The [click detector module](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/clickDetector.py)
 outputs the *inter-click intervals* (ICIs) and the overall number of clicks in the provided generated raw audio sample.
@@ -94,17 +85,14 @@ both based on our prior knowledge of whale communication.
 
 ### Data generation
 
-The data generation for the experiments based on the number of clicks and the inter-click intervals (ICIs) is performed 
-by running the [dataGenClick](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenClick.py) 
-script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt) as a 
+The data generation for the experiments based on the number of clicks and the inter-click intervals (ICIs) is performed
+by running the [dataGenClick](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenClick.py)
+script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/untagged-12c6e98877811e1802df/model.pt) as a
 command-line parameter.
 
-The data generation for the experiments based on the audio properties is performed 
-by running the [dataGenAudio](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenAudio.py) 
+The data generation for the experiments based on the audio properties is performed
+by running the [dataGenAudio](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenAudio.py)
 script with the same command-line parameter.
-
-
-<!-- TODO: explain preprocessing in the supplement doc instead of here --> 
 
 
 
@@ -119,15 +107,13 @@ For convenience, the raw outputs of the data generation above are provided in [d
   results for the *click spacing and regularity*, presented in _Section 4_ of the paper.
 
 - [acoustic.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/acoustic.ipynb)
-  replicates the results for the *acoustic properties*, presented in _Section 5_ of the paper. 
+  replicates the results for the *acoustic properties*, presented in _Section 5_ of the paper.
   Note that since these results were obtained from an independently sampled $X$, a replication of the
   result for the number of clicks is included in the notebook as a means of checking the validity of the preceding results.
 
 
 
 <!-- TODO: add lgbm notebooks if possible, otherwise just provide the scripts -->
-
-
 
 
 ### Compute resources used for data generation and analysis
@@ -139,26 +125,6 @@ and audio properties.
 The analysis of those outcomes and the generation of the results was then performed locally.
 
 <!-- TODO: add CPU cluster if lgbm results included -->
-
-
-
-
-
-## Results
-<!-- TODO: present results here at all? Just the simplest - nClicks? -->
-
-<!-- Adding a table of results into README.md lets your users quickly understand what to expect from the repository (see the README.md template for an example). Instructions on how to reproduce those results (with links to any relevant scripts, pretrained models etc.) can provide another entry point for the user and directly facilitate reproducibility. In some cases, the main result of a paper is a Figure, but that might be more difficult for users to understand without reading the paper. -->
-
-
-<!-- Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it.  -->
 
 
 ## License
