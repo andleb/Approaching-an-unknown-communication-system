@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## The `fiwGAN` model
 
-The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan).
+The `fiwGAN` architecture implementation in `pytorch` is located in [ciwfiwgan](ciwfiwgan) ([original repository](https://github.com/andleb/ciwganfiwgan-pytorch)).
 
 The command-line parameters were the following:
 
