@@ -1,6 +1,6 @@
 # Approaching an unknown communication system by latent space exploration and causal inference
 
-[This repository](https://github.com/Neurips2023Submission/Neurips2023Submission/) is part of the supplement submission of the above paper.
+[This repository](https://github.com/andleb/Approaching-an-unknown-communication-system) serves as the supplement of the above paper.
 
 <img src="figs/SchematicCDEV.png" width=50% height=50%>>
 
@@ -29,7 +29,7 @@ python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_di
 --num_epochs 15000 --slice_len 65536
 ```
 
-The remaining hyperparameters were the model defaults set [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL98C5-L98C5) and [here](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL135C5-L135C5).
+The remaining hyperparameters were the model defaults set [here](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL98C5-L98C5) and [here](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/bbd881847dc7264ffc5665d03a960363ad14cb55/ciwfiwgan/train.py#LL135C5-L135C5).
 
 
 ### The training data
@@ -43,7 +43,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 ### Trained Model
 
-Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/submission/model.pt).
+Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/submission/model.pt).
 
 It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
 (all following code also assumes the module is on the path):
@@ -77,7 +77,7 @@ The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 
 
 ### The click detector
 
-The [click detector module](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/clickDetector.py)
+The [click detector module](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/clickDetector.py)
 outputs the *inter-click intervals* (ICIs) and the overall number of clicks in the provided generated raw audio sample.
 It uses some signal filtering and minimal thresholds for both the amplitude and the temporal separation,
 both based on our prior knowledge of whale communication.
@@ -86,27 +86,27 @@ both based on our prior knowledge of whale communication.
 ### Data generation
 
 The data generation for the experiments based on the number of clicks and the inter-click intervals (ICIs) is performed
-by running the [dataGenClick](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenClick.py)
-script with the path to the [trained model](https://github.com/Neurips2023Submission/Neurips2023Submission/releases/download/submission/model.pt) as a
+by running the [dataGenClick](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/dataGenClick.py)
+script with the path to the [trained model](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/submission/model.pt) as a
 command-line parameter.
 
 The data generation for the experiments based on the audio properties is performed
-by running the [dataGenAudio](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/dataGenAudio.py)
+by running the [dataGenAudio](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/dataGenAudio.py)
 script with the same command-line parameter.
 
 
 
 ### Analysis notebooks
 
-For convenience, the raw outputs of the data generation above are provided in [data/](https://github.com/Neurips2023Submission/Neurips2023Submission/tree/main/data).
+For convenience, the raw outputs of the data generation above are provided in [data/](https://github.com/andleb/Approaching-an-unknown-communication-system/tree/main/data).
 
-- [nClicks.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/nClicks.ipynb) replicates the
+- [nClicks.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/nClicks.ipynb) replicates the
   results for the _number of clicks_, presented in _Section 3_ of the paper.
 
-- [ICI.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/ICI.ipynb) replicates the
+- [ICI.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/ICI.ipynb) replicates the
   results for the *click spacing and regularity*, presented in _Section 4_ of the paper.
 
-- [acoustic.ipynb](https://github.com/Neurips2023Submission/Neurips2023Submission/blob/main/acoustic.ipynb)
+- [acoustic.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/acoustic.ipynb)
   replicates the results for the *acoustic properties*, presented in _Section 5_ of the paper.
   Note that since these results were obtained from an independently sampled $X$, a replication of the
   result for the number of clicks is included in the notebook as a means of checking the validity of the preceding results.
