@@ -71,7 +71,6 @@ The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 
 
 
 
-
 ## Analysis
 
 
@@ -101,13 +100,13 @@ script with the same command-line parameter.
 For convenience, the raw outputs of the data generation above are provided in [data/](https://github.com/andleb/Approaching-an-unknown-communication-system/tree/main/data).
 
 - [nClicks.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/nClicks.ipynb) replicates the
-  results for the _number of clicks_, presented in _Section 3_ of the paper.
+  results for the _number of clicks_.
 
 - [ICI.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/ICI.ipynb) replicates the
-  results for the *click spacing and regularity*, presented in _Section 4_ of the paper.
+  results for the *click spacing and regularity*.
 
 - [acoustic.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/acoustic.ipynb)
-  replicates the results for the *acoustic properties*, presented in _Section 5_ of the paper.
+  replicates the results for the *acoustic properties*.
   Note that since these results were obtained from an independently sampled $X$, a replication of the
   result for the number of clicks is included in the notebook as a means of checking the validity of the preceding results.
 
