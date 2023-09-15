@@ -1,6 +1,6 @@
 # Approaching an unknown communication system by latent space exploration and causal inference
 
-[This repository](https://github.com/andleb/Approaching-an-unknown-communication-system) serves as the supplement of [the paper](https://arxiv.org/abs/2303.10931).
+[This repository](https://github.com/andleb/Approaching-an-unknown-communication-system) serves as the supplement of [the paper](https://arxiv.org/abs/2303.10931), which uses generative models to help determine the meaningful building blocks of sperm whale communication.
 
 <img src="figs/SchematicCDEV.png" width=50% height=50%>
 
