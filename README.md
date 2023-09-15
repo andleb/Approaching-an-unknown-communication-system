@@ -43,7 +43,7 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 ### Trained Model
 
-Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/submission/model.pt).
+Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt).
 
 It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
 (all following code also assumes the module is on the path):
