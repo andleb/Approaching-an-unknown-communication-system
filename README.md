@@ -126,8 +126,6 @@ and audio properties.
 
 The analysis of those outcomes and the generation of the results was then performed locally.
 
-<!-- TODO: add CPU cluster if lgbm results included -->
-
 
 ## License
 
