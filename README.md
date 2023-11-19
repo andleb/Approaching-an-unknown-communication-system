@@ -64,10 +64,6 @@ G.to(device)
 
 ### Compute resources used for model training
 
-<!-- Compute: Did you include the amount of compute and the type of resources used (e.g., type of GPUs, internal cluster, or cloud provider)? Ideally, you would provide the compute required for each of the individual experimental runs as well as the total compute. Note that your full research project might have required more compute than the experiments reported in the paper (e.g., preliminary or failed experiments that didn't make it into the paper). Enter yes, no, n/a, or an explanation if appropriate. Answers are visible to reviewers.
-
-    Authors are encouraged to provide as much information as practical about the type and amount of compute used for experiments. The total compute used for all experiments may be harder to characterize, but if you can do that, that would be even better. -->
-
 
 The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623.
 
