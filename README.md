@@ -43,9 +43,12 @@ In terms of data preprocessing, a constant DC microphone bias was removed from t
 
 ### Trained Model
 
-Instead of the data, we thus provide the generator component of trained model used to generate results [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt).
+Instead of the data, we thus provide the generator component of main trained model used to
+generate results [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt).
 
-It can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
+Additionally, we provide a separate, independently trained model for robustness checks (see below) [here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt).
+
+The models can be loaded with the following snippet after putting [ciwfiwgan](ciwfiwgan) on your path
 (all following code also assumes the module is on the path):
 
 ```python
@@ -113,6 +116,10 @@ For convenience, the raw outputs of the data generation above are provided in [d
 
 
 <!-- TODO: add lgbm notebooks if possible, otherwise just provide the scripts -->
+
+## Robustness check
+A quick replication of the number of clicks encoding result using an independently trained model with a different number
+of specified encodings is provided in `robustness.ipynb`.
 
 
 ### Compute resources used for data generation and analysis
