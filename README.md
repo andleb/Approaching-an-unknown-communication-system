@@ -129,5 +129,5 @@ The analysis of those outcomes and the generation of the results was then perfor
 
 ## License
 
-All content in this repository is licensed under the [MIT license](LICENSE).  
+All content in this repository is licensed under the [BSD 3-Clause License](LICENSE).  
 Andrej Leban
