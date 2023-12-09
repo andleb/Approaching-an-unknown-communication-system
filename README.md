@@ -131,3 +131,8 @@ The analysis of those outcomes and the generation of the results was then perfor
 
 All content in this repository is licensed under the [BSD 3-Clause License](LICENSE).  
 Andrej Leban
+
+## Citations
+
+Please cite the following paper if you use this repository in your research:
+https://arxiv.org/abs/2303.10931
