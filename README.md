@@ -110,9 +110,6 @@ For convenience, the raw outputs of the data generation above are provided in [d
   result for the number of clicks is included in the notebook as a means of checking the validity of the preceding results.
 
 
-
-<!-- TODO: add lgbm notebooks if possible, otherwise just provide the scripts -->
-
 ## Robustness check
 A quick replication of the number of clicks encoding result using an independently trained model with a different number
 of specified encodings is provided in `robustness.ipynb`.
@@ -126,13 +123,14 @@ and audio properties.
 
 The analysis of those outcomes and the generation of the results was then performed locally.
 
+## Citations
+
+If you use this repository in your research, please refer to the [citation file](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/CITATION.cff)
+(for the code) and [the paper](https://arxiv.org/abs/2303.10931) in general.
 
 ## License
 
 All content in this repository is licensed under the [BSD 3-Clause License](LICENSE).  
 Andrej Leban
 
-## Citations
 
-Please cite the following paper if you use this repository in your research:
-https://arxiv.org/abs/2303.10931
